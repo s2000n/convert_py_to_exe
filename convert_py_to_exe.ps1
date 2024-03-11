@@ -1,0 +1,6 @@
+$filePath = Read-Host -Prompt "Enter file path"
+$pythonFileName = Read-Host -Prompt "Enter Python file name (including .py extension)"
+$command = "pyinstaller"
+$arguments = "--onefile '$filePath\$pythonFileName'"
+Write-Host "Running command: $command $arguments"
+Invoke-Expression "$command $arguments"
